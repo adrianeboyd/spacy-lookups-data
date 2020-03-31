@@ -55,6 +55,10 @@ en = {
     "lemma_rules": get_file("en_lemma_rules.json"),
     "lemma_index": get_file("en_lemma_index.json"),
     "lemma_exc": get_file("en_lemma_exc.json"),
+    "lexeme_cluster": get_file("en_lexeme_cluster.json"),
+    "lexeme_norm": get_file("en_lexeme_norm.json"),
+    "lexeme_prob": get_file("en_lexeme_prob.json"),
+    "lexeme_settings": get_file("en_lexeme_settings.json"),
 }
 el = {
     "lemma_index": get_file("el_lemma_index.json"),
