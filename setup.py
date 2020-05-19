@@ -8,7 +8,6 @@ from setuptools import setup, find_packages
 
 def gzip_language_data(root, source):
     print("Compressing language data")
-    #import srsly
     import gzip
     from pathlib import Path
 
@@ -19,10 +18,8 @@ def gzip_language_data(root, source):
             # If the gz is newer it doesn't need updating
             print("Skipping {}, already compressed".format(jsonfile))
             continue
-        with open(jsonfile, 'rb') as infileh, gzip.open(outfile, 'wb') as outfileh:
-            outfileh.write(infileh.read())
-        #data = srsly.read_json(jsonfile)
-        #srsly.write_gzip_json(outfile, data)
+        with open(jsonfile, 'r') as infileh, gzip.open(outfile, 'w') as outfileh:
+            outfileh.write(infileh.read().encode("utf-8"))
         print("Compressed {}".format(jsonfile))
 
 
